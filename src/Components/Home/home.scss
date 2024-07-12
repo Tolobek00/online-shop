@@ -1,0 +1,9 @@
+@import "../../Styles/mixin";
+
+.Product-Container {
+  @include flexbox(space-evenly, center);
+  width: 1170px;
+  margin: 0 auto;
+
+  padding: 20px; 
+}

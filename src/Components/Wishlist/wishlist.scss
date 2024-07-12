@@ -1,0 +1,147 @@
+@import "../../Styles/mixin";
+.wishlist {
+
+  .title-container {
+    @include flexbox(space-between, center);
+    height: 150px;
+  
+    .title {
+      /* Title/20PX Regular */
+      color: rgb(0, 0, 0);
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+    .move-btn {
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+      width: 223px;
+      height: 56px;
+      color: rgb(0, 0, 0);
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: center;
+      background-color: white;
+    }
+  }
+  .product-container {
+    @include flexbox(center, center);
+    flex-direction: column;
+    position: relative;
+    border-radius: 4px;
+    background: rgb(245, 245, 245);
+    width: 270px;
+    height: 250px;
+    text-align: center;
+  
+
+    .bag {
+      width: 100%;
+      height: 250px;
+      object-fit: cover
+    }
+    .discount-container {
+      @include flexbox(space-between, start);
+
+      .percentage {
+        width: 55px;
+        height: 26px;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        border-radius: 4px;
+        background: rgb(219, 68, 68);
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        //   letter-spacing: 0%;
+        text-align: center;
+      }
+      .delete {
+        @include flexbox(center, center);
+        background: rgb(255, 255, 255);
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        visibility: hidden;
+      }
+    }
+
+    .cart-button {
+      border-radius: 0px 0px 4px 4px;
+      width: 270px;
+      height: 41px;
+      background: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+      position: absolute;
+      bottom: 0;
+      visibility: hidden;
+
+      .cart {
+        position: absolute;
+        left: 68px;
+      }
+    }
+  }
+  .product-container:hover .cart-button {
+    visibility: visible;
+  }
+  .product-container:hover .delete {
+    visibility: visible;
+  }
+  div {
+    .gucci {
+      /* Title/16PX Medium */
+      color: rgb(0, 0, 0);
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin-top: 15px;
+
+    }
+    .prices {
+      @include flexbox(flex-start, center);
+      gap: 25px;
+      .discountPrice {
+        color: rgb(219, 68, 68);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      .price {
+        color: rgba(0, 0, 0, 0.564);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-decoration-line: line-through;
+      }
+    }
+  }
+  .products-item {
+      overflow-y: hidden;
+      white-space: nowrap;
+      @include flexbox (space-evenly, center);
+      gap: 15px;
+  }
+}

@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+
+import AboutPage from "./Pages/AboutPage";
+import Cart from "./Components/Cart/Cart";
+import Layout from "./Components/Layout/Layout";
+import HomePage from "./Pages/HomePage";
+import NotFound from "./Pages/NotFound";
+import WishlistPage from "./Pages/WishlistPage";
+import Login from "./Components/Auth/Login/Login";
+import Register from "./Components/Auth/Register/Register";
+import Profile from "./Components/Profile/Profile";
+
+
+import "./App.css";
+import Contact from "./Components/Contact/Contact";
+import Navigation from "./Components/navigationv3/Navigation";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Wrapper">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="wishlist" element={<WishlistPage />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="navigation" element={<Navigation/>}/>
+        </Route>
+      </Routes>
     </div>
   );
 }

@@ -1,0 +1,71 @@
+@import "../../../Styles/mixin";
+
+.login {
+  margin: 100px 0 100px 0;
+  @include flexbox(flex-start, center);
+  gap: 150px;
+  img {
+    width: 805px;
+    height: 781px;
+  }
+  .auth {
+    @include flexbox(space-between, flex-start);
+    flex-direction: column;
+    width: 371px;
+    height: 326px;
+    .email-title {
+      /* Heading/36PX Medium */
+      color: rgb(0, 0, 0);
+      font-family: Inter;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 30px;
+      letter-spacing: 4%;
+      text-align: left;
+    }
+    p {
+      /* Title/16PX Regular */
+      color: rgb(0, 0, 0);
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    input {
+      border-bottom: 1px solid black;
+      width: 370px;
+      height: 32px;
+    }
+    .login-btn {
+      @include flexbox(flex-start, center);
+      gap: 25px;
+      button {
+        border-radius: 4px;
+        /* Title/16PX Medium */
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: center;
+        /* Button2 */
+        background: rgb(219, 68, 68);
+        width: 143px;
+        height: 56px;
+      }
+      .forgot-click {
+        /* Title/16PX Regular */
+        color: rgb(219, 68, 68);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+  }
+}

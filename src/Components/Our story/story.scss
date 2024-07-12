@@ -1,0 +1,40 @@
+@import "../../Styles/mixin";
+
+.story {
+  // margin-top: 70px;
+  .title {
+    @include flexbox(flex-start, center);
+    height: 100px;
+    width: 1170px;
+    margin: 0 auto;
+  }
+  .text-banner {
+    width: 1170px;
+    @include flexbox(space-between, center);
+    margin: 0 auto;
+    gap: 75px;
+    // border: 1px solid black;
+    .text {
+      h1 {
+        /* Heading/54PX SemiBold */
+        color: rgb(0, 0, 0);
+        font-family: Inter;
+        font-size: 54px;
+        font-weight: 600;
+        line-height: 64px;
+        letter-spacing: 6%;
+        text-align: justify;
+      }
+      p {
+        width: 525px;
+        color: rgb(0, 0, 0);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+  }
+}

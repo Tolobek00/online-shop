@@ -1,0 +1,176 @@
+@import "../../Styles/mixin";
+
+.footer {
+  background: rgb(0, 0, 0);
+  width: 1440px;
+  text-align: center;
+  padding-bottom: 25px;
+  .footer-container {
+    height: 400px;
+    color: white;
+    width: 1170px;
+    margin: 0 auto;
+    @include flexbox(space-between, flex-start);
+    padding-top: 55px;
+
+    .exclusive {
+      width: 217px;
+      //   height: 188px;
+      .exclus {
+        /* Heading/24PX Bold */
+        color: rgb(250, 250, 250);
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 55px;
+        letter-spacing: 3%;
+        text-align: left;
+      }
+      .sub {
+        /* Title/20PX Medium */
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 35px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      .get {
+        /* Title/16PX Regular */
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      section {
+        position: relative;
+        input {
+          box-sizing: border-box;
+          border: 1.5px solid rgb(250, 250, 250);
+          border-radius: 4px;
+          width: 217px;
+          height: 48px;
+          background: rgb(0, 0, 0);
+          color: white;
+          padding: 0 35px 0 25px;
+        }
+        img {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+        }
+      }
+    }
+    .support {
+      width: 175px;
+      // height: 180px;
+      h1 {
+        /* Title/20PX Medium */
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+    .account {
+      width: 123px;
+      // height: 236px;
+      h1 {
+        /* Title/20PX Medium */
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+    .quick {
+      width: 109px;
+      // height: 196px;
+      h1 {
+        /* Title/20PX Medium */
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 55px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+    .download {
+      width: 198px;
+      // height: 210px;
+      .download-container {
+        .qrCode {
+          gap: 10px;
+          width: 198px;
+          height: 84px;
+          @include flexbox();
+          .apps {
+            gap: 5px;
+            @include flexbox(space-between, center);
+            flex-direction: column;
+          }
+        }
+        .icons {
+          width: 168px;
+          height: 54px;
+          gap: 10px;
+          @include flexbox(flex-start, center);
+        }
+      }
+      h1 {
+        /* Title/20PX Medium */
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 55px;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+      p {
+        /* Title/12PX Medium */
+        color: rgb(250, 250, 250);
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 35px;
+
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+    h1 {
+      line-height: 55px;
+    }
+    h2 {
+      /* Title/16PX Regular */
+      color: rgb(250, 250, 250);
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 35px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+  }
+}
+.footer-underline {
+  height: 40px;
+  @include flexbox(center, center);
+  border-top: 1px solid rgba(255, 255, 255, 0.137);
+  text-align: center;
+  h3 {
+    color: rgba(255, 255, 255, 0.137);
+
+  }
+}

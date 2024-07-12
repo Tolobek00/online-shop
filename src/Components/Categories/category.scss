@@ -1,0 +1,99 @@
+@import "../../Styles/mixin";
+
+.category {
+  width: 1170px;
+  height: 313px;
+  margin: 100px auto;
+  .category-title {
+    @include flexbox(flex-start, center);
+    gap: 15px;
+    div {
+      width: 20px;
+      height: 40px;
+      border-radius: 4px;
+      background: rgb(219, 68, 68);
+    }
+    p {
+      color: rgb(219, 68, 68);
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    .title-product {
+      margin-bottom: -8px;
+    }
+  }
+  .browse {
+    height: 200px;
+    @include flexbox(space-between, center);
+    .blog-category {
+      .left {
+        transform: rotate(180deg);
+        margin-right: 20px;
+      }
+      img {
+        position: relative;
+        background: rgb(245, 245, 245);
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        transition: 0.5s;
+      }
+      img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: green;
+        overflow: hidden;
+        z-index: -1;
+        transition: 0.5s;
+      }
+      img:hover::before {
+        width: 100%;
+      }
+    }
+    h1 {
+      color: rgb(0, 0, 0);
+      font-family: Inter;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 48px;
+      letter-spacing: 4%;
+      text-align: left;
+    }
+  }
+  .categories-cont {
+    height: 145px;
+    @include flexbox(space-between, center);
+
+    .blog-category {
+      position: relative;
+      @include flexbox(center, center);
+      flex-direction: column;
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      width: 170px;
+      height: 145px;
+      transition: 0.3s ease-in-out;
+    }
+    .blog-category:hover {
+      border-radius: 4px;
+      // box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+      box-shadow: 5px 10px 5px 3px rgba(0, 0, 0, 0.253);
+      background: rgb(219, 68, 68);
+      color: white;
+      transform: scale(1.05);
+    }
+    .blog-category:hover img {
+      color: white;
+      filter: brightness(0) invert(1);
+    }
+  }
+}
